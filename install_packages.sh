@@ -50,3 +50,6 @@ sudo npm install -g grunt-cli grunt-devtools
 
 # UTILITIES
 $INSTALL links
+$INSTALL mc
+$INSTALL imagemagick
+

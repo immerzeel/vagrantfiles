@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+forge "http://forge.puppetlabs.com"
+
+mod 'puppetlabs/apt'
+mod 'puppetlabs/stdlib'
+mod 'puppetlabs/vcsrepo'
+mod 'puppetlabs/nodejs'
+
+# Install Puppet provider for managing OS X Plists.
+# mod 'property_list_key',
+#   :git => 'https://github.com/glarizza/puppet-property_list_key.git'

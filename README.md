@@ -1,4 +1,0 @@
-vagrantfiles
-============
-
-Vagrant install files 

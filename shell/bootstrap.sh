@@ -49,10 +49,19 @@ fi
 if [ ! -f /etc/puppet/Puppetfile.lock ]; then
     echo 'Download & install Puppet modules...'
     # Copy the Puppetfile to the default puppet location.
-    cp /vagrant/puppet/Puppetfile /etc/puppet/
-    cd /etc/puppet && librarian-puppet install --clean
+    cp -u /vagrant/puppet/Puppetfile /etc/puppet/
+
+    # Copy (update) the Custom Modules to the default modules location.
+    # XXX Temporary solution. Custom modules should be in seperate git repos.
+    cp -u -r /vagrant/puppet/modules/* /etc/puppet/modules/
+
+    cd /etc/puppet && librarian-puppet install
 else
     echo 'Updating Puppet modules...'
+    # Copy (update) the Custom Modules to the default modules location.
+    # XXX Temporary solution. Custom modules should be in seperate git repos.
+    cp -u -r /vagrant/puppet/modules/* /etc/puppet/modules/
     cp /vagrant/puppet/Puppetfile /etc/puppet/
+
     cd /etc/puppet && librarian-puppet update
 fi

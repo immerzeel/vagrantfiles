@@ -25,7 +25,7 @@ if ! type -t git > /dev/null 2>&1 ; then
     apt-get -y update > /dev/null 2>&1
 
     echo 'Installing Git...'
-    apt-get install -y git-core > /dev/null
+    apt-get install -y git-core > /dev/null 2>&1
 else
     gitVersion=`git --version`
     echo "$gitVersion already installed..."
@@ -35,12 +35,12 @@ fi
 if  ! `gem search -i librarian-puppet` > /dev/null ; then
     # Update the Ruby gems packages.
     echo 'Updating Ruby gems...'
-    gem update > /dev/null
+    gem update > /dev/null 2>&1
 
     echo 'Installing Librarian Puppet...'
     # Install the ruby-dev for creating stand-alone Ruby apps.
-    apt-get install -y ruby-dev > /dev/null
-    gem install librarian-puppet --no-rdoc --no-ri > /dev/null
+    apt-get install -y ruby-dev > /dev/nul 2>&1
+    gem install librarian-puppet --no-rdoc --no-ri > /dev/null 2>&1
 else
     librarianPuppetVersion=`librarian-puppet version`
     echo "$librarianPuppetVersion already installed..."
@@ -51,17 +51,11 @@ if [ ! -f /etc/puppet/Puppetfile.lock ]; then
     # Copy the Puppetfile to the default puppet location.
     cp -u /vagrant/puppet/Puppetfile /etc/puppet/
 
-    # Copy (update) the Custom Modules to the default modules location.
-    # XXX Temporary solution. Custom modules should be in seperate git repos.
-    cp -u -r /vagrant/puppet/modules/* /etc/puppet/modules/
-
-    cd /etc/puppet && librarian-puppet install
+    cd /etc/puppet && librarian-puppet install --verbose --clean
 else
     echo 'Updating Puppet modules...'
-    # Copy (update) the Custom Modules to the default modules location.
-    # XXX Temporary solution. Custom modules should be in seperate git repos.
-    cp -u -r /vagrant/puppet/modules/* /etc/puppet/modules/
+    # Copy the Puppetfile to the default puppet location.
     cp /vagrant/puppet/Puppetfile /etc/puppet/
 
-    cd /etc/puppet && librarian-puppet update
+    cd /etc/puppet && librarian-puppet update --verbose
 fi

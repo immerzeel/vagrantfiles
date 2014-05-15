@@ -16,6 +16,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-x64-virtualbox-puppet.box"
   config.vm.hostname = "development"
 
+  config.vm.synced_folder ".", "/vagrant", type: "smb"
+
   # Shell provisioning
   # Bootstraps Puppet on the VM, so will run before Puppet provisioning.
   config.vm.provision "shell", path: "shell/bootstrap.sh"

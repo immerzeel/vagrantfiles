@@ -20,6 +20,6 @@ package { $required_apt_packages:
 }
 
 include dotfiles
-include oh_my_zsh
+include ohmyzsh
 include jekyll # Install Jekyll for static website publishing.
 

@@ -7,8 +7,10 @@
 #   stage => 'setup'
 # }
 
+# Set the global executables path for all the modules.
+Exec { path => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/', '/usr/local/bin', '/usr/local/sbin']}
+
 $required_apt_packages = [
-  'vim',
   'tmux',
   'silversearcher-ag',
   'links'
@@ -22,4 +24,5 @@ package { $required_apt_packages:
 include dotfiles
 include ohmyzsh
 include jekyll # Install Jekyll for static website publishing.
+include vim
 

@@ -9,16 +9,16 @@ mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/nodejs'
 
 mod 'dotfiles',
-  :git => 'git://git@github.com:immerzeel/puppet-dotfiles.git'
+  :git => 'git://github.com/immerzeel/puppet-dotfiles.git'
 
 mod 'ohmyzsh',
-  :git => 'git://git@github.com:immerzeel/puppet-ohmyzsh.git'
+  :git => 'git://github.com/immerzeel/puppet-ohmyzsh.git'
 
 mod 'vim',
-  :git => 'git://git@github.com:immerzeel/puppet-vim.git'
+  :git => 'git://github.com/immerzeel/puppet-vim.git'
 
 mod 'jekyll',
-  :git => 'git://git@github.com:immerzeel/puppet-jekyll.git'
+  :git => 'git://github.com/immerzeel/puppet-jekyll.git'
 
 # Install Puppet provider for managing OS X Plists.
 # mod 'property_list_key',

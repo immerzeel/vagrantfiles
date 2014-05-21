@@ -51,11 +51,11 @@ if [ ! -f /etc/puppet/Puppetfile.lock ]; then
     # Copy the Puppetfile to the default puppet location.
     cp -u /vagrant/puppet/Puppetfile /etc/puppet/
 
-    cd /etc/puppet && librarian-puppet install --verbose --clean
+    cd /etc/puppet && librarian-puppet install --clean
 else
     echo 'Updating Puppet modules...'
     # Copy the Puppetfile to the default puppet location.
     cp /vagrant/puppet/Puppetfile /etc/puppet/
 
-    cd /etc/puppet && librarian-puppet update --verbose
+    cd /etc/puppet && librarian-puppet update
 fi

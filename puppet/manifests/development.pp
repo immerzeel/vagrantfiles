@@ -11,8 +11,9 @@
 Exec { path => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/', '/usr/local/bin', '/usr/local/sbin']}
 
 $required_apt_packages = [
-  'tmux',
   'silversearcher-ag',
+  'pandoc',
+  'imagemagick',
   'links'
 ]
 
@@ -21,8 +22,13 @@ package { $required_apt_packages:
     provider => apt
 }
 
+# tmux and tmuxinator
+package{'tmux':}
+package{'tmuxinator':
+  provider => gem
+}
+
 include dotfiles
 include ohmyzsh
-include jekyll # Install Jekyll for static website publishing.
 include vim
 

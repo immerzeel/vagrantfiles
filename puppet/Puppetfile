@@ -8,16 +8,16 @@ mod 'puppetlabs/stdlib'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/nodejs'
 
-mod 'dotfiles',
+mod 'immerzeel/dotfiles',
   :git => 'git://github.com/immerzeel/puppet-dotfiles.git'
 
-mod 'ohmyzsh',
+mod 'immerzeel/ohmyzsh',
   :git => 'git://github.com/immerzeel/puppet-ohmyzsh.git'
 
-mod 'vim',
+mod 'immerzeel/vim',
   :git => 'git://github.com/immerzeel/puppet-vim.git'
 
-mod 'jekyll',
+mod 'immerzeel/jekyll',
   :git => 'git://github.com/immerzeel/puppet-jekyll.git'
 
 # Install Puppet provider for managing OS X Plists.

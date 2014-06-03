@@ -1,0 +1,15 @@
+---
+classes:
+        - vagrant
+        - chrome
+        - firefox
+        - smplayer
+        - charles
+        - crashplan
+        - 7-zip
+        - putty
+        - dropbox
+        - autohotkey
+        - vim
+
+ 

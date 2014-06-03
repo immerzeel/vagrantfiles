@@ -1,0 +1,9 @@
+---
+classes:
+        - ntp
+        - ohmyzsh
+        - tmux
+        - utils
+
+ntp::enable: true
+

@@ -1,0 +1,8 @@
+---
+classes:
+        - vagrant
+        - chrome
+        - firefox
+        - charles
+        - crashplan
+        - dropbox

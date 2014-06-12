@@ -1,0 +1,12 @@
+[submodule "puppet/modules/puppet-vim"]
+	path = puppet/modules/puppet-vim
+	url = https://github.com/immerzeel/puppet-vim.git
+[submodule "puppet/modules/puppet-ohmyzsh"]
+	path = puppet/modules/puppet-ohmyzsh
+	url = https://github.com/immerzeel/puppet-ohmyzsh.git
+[submodule "puppet/modules/puppet-dotfiles"]
+	path = puppet/modules/puppet-dotfiles
+	url = https://github.com/immerzeel/puppet-dotfiles.git
+[submodule "puppet/modules/puppet-jekyll"]
+	path = puppet/modules/puppet-jekyll
+	url = https://github.com/immerzeel/puppet-jekyll.git

@@ -10,3 +10,6 @@
 [submodule "puppet/modules/puppet-jekyll"]
 	path = puppet/modules/puppet-jekyll
 	url = https://github.com/immerzeel/puppet-jekyll.git
+[submodule "puppet/modules/puppet-tmux"]
+	path = puppet/modules/puppet-tmux
+	url = https://github.com/immerzeel/puppet-tmux.git

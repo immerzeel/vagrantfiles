@@ -13,3 +13,9 @@
 [submodule "puppet/modules/puppet-tmux"]
 	path = puppet/modules/puppet-tmux
 	url = https://github.com/immerzeel/puppet-tmux.git
+[submodule "puppet/modules/puppet-vagrant"]
+	path = puppet/modules/puppet-vagrant
+	url = https://github.com/immerzeel/puppet-vagrant.git
+[submodule "puppet/modules/puppet-utils"]
+	path = puppet/modules/puppet-utils
+	url = https://github.com/immerzeel/puppet-utils.git

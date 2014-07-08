@@ -11,5 +11,9 @@ classes:
         - dropbox
         - autohotkey
         - vim
+        - spotify
+        - steam
+        - flux
+        - kitty
 
  

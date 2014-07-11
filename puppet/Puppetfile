@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 #^syntax detection
 
-forge "http://forge.puppetlabs.com"
+forge "https://forgeapi.puppetlabs.com"
 
 mod 'puppetlabs/apt'
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/nodejs'
+mod 'ripienaar/module_data'
 
 mod 'immerzeel/dotfiles',
   :git => 'git://github.com/immerzeel/puppet-dotfiles.git'

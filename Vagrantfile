@@ -10,6 +10,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.box = "ubuntu-13.10"
     dev.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-x64-virtualbox-puppet.box"
     dev.vm.hostname = "dev-immerzeel"
+    
+    # Force to download Guest Addition online.
+    config.vbguest.iso_path = "http://download.virtualbox.org/virtualbox/%{version}/VBoxGuestAdditions_%{version}.iso"
 
     # VirtualBox settings
     dev.vm.provider "virtualbox" do |v|
